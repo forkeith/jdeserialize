@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -88,7 +89,7 @@ public class jdeserialize {
     public static HashSet<String> keywordSet;
 
     private String filename;
-    private HashMap<Integer,content> handles = new HashMap<Integer,content>();
+    private Map<Integer,content> handles = new LinkedHashMap<Integer,content>();
     private ArrayList<Map<Integer,content>> handlemaps = new ArrayList<Map<Integer,content>>();
     private ArrayList<content> content;
     private int curhandle;
@@ -183,10 +184,10 @@ public class jdeserialize {
     public void read_Classdata(DataInputStream dis, instance inst) throws IOException {
         ArrayList<classdesc> classes = new ArrayList<classdesc>();
         inst.classdesc.getHierarchy(classes);
-        Map<classdesc, Map<field, Object>> alldata = new HashMap<classdesc, Map<field, Object>>();
-        Map<classdesc, List<content>> ann = new HashMap<classdesc, List<content>>();
+        Map<classdesc, Map<field, Object>> alldata = new LinkedHashMap<classdesc, Map<field, Object>>();
+        Map<classdesc, List<content>> ann = new LinkedHashMap<classdesc, List<content>>();
         for(classdesc cd: classes) {
-            Map<field, Object> values = new HashMap<field, Object>();
+            Map<field, Object> values = new LinkedHashMap<field, Object>();
             if((cd.descflags & ObjectStreamConstants.SC_SERIALIZABLE) != 0) {
                 if((cd.descflags & ObjectStreamConstants.SC_EXTERNALIZABLE) != 0) {
                     throw new IOException("SC_EXTERNALIZABLE & SC_SERIALIZABLE encountered");
@@ -494,7 +495,7 @@ public class jdeserialize {
     public void reset() {
         debug("reset ordered!");
         if(handles != null && handles.size() > 0) {
-            HashMap<Integer,content> hm = new HashMap<Integer,content>();
+            Map<Integer,content> hm = new LinkedHashMap<Integer,content>();
             hm.putAll(handles);
             handlemaps.add(hm);
         }
@@ -882,7 +883,7 @@ public class jdeserialize {
             }
         }
         if(handles != null && handles.size() > 0) {
-            HashMap<Integer,content> hm = new HashMap<Integer,content>();
+            Map<Integer,content> hm = new LinkedHashMap<Integer,content>();
             hm.putAll(handles);
             handlemaps.add(hm);
         }
@@ -1021,8 +1022,8 @@ public class jdeserialize {
      * @throws ValidityException if the found values don't correspond to spec
      */
     public void connectMemberClasses() throws IOException {
-        HashMap<classdesc, String> newnames = new HashMap<classdesc, String>();
-        HashMap<String, classdesc> classes = new HashMap<String, classdesc>();
+        Map<classdesc, String> newnames = new LinkedHashMap<classdesc, String>();
+        Map<String, classdesc> classes = new LinkedHashMap<String, classdesc>();
         HashSet<String> classnames = new HashSet<String>();
         for(content c: handles.values()) {
             if(!(c instanceof classdesc)) {
@@ -1156,7 +1157,7 @@ public class jdeserialize {
     }
 
     public static void main(String[] args) {
-        HashMap<String, Integer> options = new HashMap<String, Integer>();
+        Map<String, Integer> options = new LinkedHashMap<String, Integer>();
         Getopt go = new Getopt();
         go.addOption("-help", 0, "Show this list.");
         go.addOption("-debug", 0, "Write debug info generated during parsing to stdout.");

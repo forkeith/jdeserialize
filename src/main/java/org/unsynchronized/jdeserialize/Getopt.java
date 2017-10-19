@@ -1,6 +1,6 @@
 package org.unsynchronized.jdeserialize;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
@@ -56,8 +56,8 @@ public class Getopt {
      * Constructor.  
      */
     public Getopt() {
-        this.options = new HashMap<String, Integer>();
-        this.descriptions = new HashMap<String, String>();
+        this.options = new LinkedHashMap<String, Integer>();
+        this.descriptions = new LinkedHashMap<String, String>();
     }
 
     /**
@@ -101,7 +101,7 @@ public class Getopt {
      */
     public void parse(String[] args) throws OptionParseException {
         this.otherargs = new ArrayList<String>();
-        this.optvals = new HashMap<String, List<String>>();
+        this.optvals = new LinkedHashMap<String, List<String>>();
 
         for(int i = 0; i < args.length; i++) {
             if(optvals != null) {
@@ -150,7 +150,7 @@ public class Getopt {
 
     public static void main(String[] args) {
         try {
-            HashMap<String, Integer> options = new HashMap<String, Integer>();
+            Map<String, Integer> options = new LinkedHashMap<String, Integer>();
             Getopt go = new Getopt();
             go.addOption("-optzero", 0, "zero-arg constructor");
             go.addOption("-optone", 1, "one-arg constructor");

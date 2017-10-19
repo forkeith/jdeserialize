@@ -1,5 +1,5 @@
 package org.unsynchronized.jdeserialize;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,7 +24,7 @@ public class instance extends contentbase {
      */
     public instance() {
         super(contenttype.INSTANCE);
-        this.fielddata = new HashMap<classdesc, Map<field, Object>>();
+        this.fielddata = new LinkedHashMap<classdesc, Map<field, Object>>();
     }
     public String toString() {
         StringBuffer sb = new StringBuffer();
