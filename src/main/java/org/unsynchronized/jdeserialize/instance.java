@@ -1,6 +1,7 @@
-package org.unsynchronized;
-import java.io.*;
-import java.util.*;
+package org.unsynchronized.jdeserialize;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Represents an instance of a non-enum, non-Class, non-ObjectStreamClass, 

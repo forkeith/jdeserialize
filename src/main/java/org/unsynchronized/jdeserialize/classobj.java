@@ -1,6 +1,4 @@
-package org.unsynchronized;
-import java.io.*;
-import java.util.*;
+package org.unsynchronized.jdeserialize;
 
 /**
  * This represents a Class object (i.e. an instance of type Class) serialized in the

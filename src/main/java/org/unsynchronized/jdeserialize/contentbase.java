@@ -1,6 +1,4 @@
-package org.unsynchronized;
-import java.io.*;
-import java.util.*;
+package org.unsynchronized.jdeserialize;
 
 /**
  * Provides a skeleton content implementation.

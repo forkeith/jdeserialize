@@ -1,6 +1,7 @@
-package org.unsynchronized;
-import java.io.*;
-import java.util.*;
+package org.unsynchronized.jdeserialize;
+import java.io.ByteArrayInputStream;
+import java.io.EOFException;
+import java.io.IOException;
 
 /**
  * Represents a serialized string object.  This is primarily used in serialized streams;

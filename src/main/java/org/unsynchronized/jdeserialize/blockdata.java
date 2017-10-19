@@ -1,5 +1,4 @@
-package org.unsynchronized;
-import java.io.*;
+package org.unsynchronized.jdeserialize;
 
 /**
  * Represents an opaque block of data written to the stream.  Primarily, these are used to

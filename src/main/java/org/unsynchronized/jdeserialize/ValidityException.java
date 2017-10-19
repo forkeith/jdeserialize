@@ -1,6 +1,5 @@
-package org.unsynchronized;
-import java.io.*;
-import java.util.*;
+package org.unsynchronized.jdeserialize;
+import java.io.IOException;
 
 /**
  * Exception that denotes that data in the stream did not conform to the constraints

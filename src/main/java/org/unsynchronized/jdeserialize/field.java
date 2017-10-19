@@ -1,6 +1,5 @@
-package org.unsynchronized;
-import java.io.*;
-import java.util.*;
+package org.unsynchronized.jdeserialize;
+import java.io.IOException;
 
 /**
  * This class represents a field within a class description/declaration (classdesc).  It

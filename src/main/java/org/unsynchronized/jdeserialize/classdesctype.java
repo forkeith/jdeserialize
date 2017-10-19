@@ -1,4 +1,4 @@
-package org.unsynchronized;
+package org.unsynchronized.jdeserialize;
 
 /**
  * Enum for class description types.

@@ -1,8 +1,22 @@
-package org.unsynchronized;
+package org.unsynchronized.jdeserialize;
 
-import java.io.*;
-import java.util.*;
-import java.util.regex.*;
+import java.io.DataInputStream;
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectStreamConstants;
+import java.io.PrintStream;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * The main user-facing class for the jdeserialize library.  Also the implementation of

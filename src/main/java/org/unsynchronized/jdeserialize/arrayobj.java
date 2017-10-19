@@ -1,6 +1,4 @@
-package org.unsynchronized;
-import java.io.*;
-import java.util.*;
+package org.unsynchronized.jdeserialize;
 
 /**
  * <p>Represents an array instance, including the values the comprise the array.  </p>
