@@ -1,5 +1,6 @@
-import java.util.*;
-import java.io.*;
+package org.unsynchronized.jdeserialize;
+
+import java.io.Serializable;
 
 public class blob2 implements Serializable {
     public class inner implements Serializable {

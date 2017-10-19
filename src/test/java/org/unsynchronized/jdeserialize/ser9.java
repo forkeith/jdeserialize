@@ -1,5 +1,12 @@
-import java.io.*;
-import java.util.Date;
+package org.unsynchronized.jdeserialize;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.ObjectStreamClass;
 
 public class ser9 {
 	public static void main(String args[]) {
@@ -9,10 +16,10 @@ public class ser9 {
 
 	public static void do_write() {
 		try {
-            bluh.zuh.blob4 bl = new bluh.zuh.blob4(1234);
+            blob4 bl = new blob4(1234);
 			FileOutputStream fos = new FileOutputStream("ser9.duh");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
-            ObjectStreamClass osc = ObjectStreamClass.lookup(bluh.zuh.blob4.class);
+            ObjectStreamClass osc = ObjectStreamClass.lookup(blob4.class);
             System.out.println(osc.getClass().getName());
             System.out.println(osc.toString());
             oos.writeObject(new IOException());

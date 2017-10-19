@@ -1,4 +1,4 @@
-package bluh.zuh;
+package org.unsynchronized.jdeserialize;
 
 import java.util.*;
 import java.io.*;

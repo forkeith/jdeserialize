@@ -1,5 +1,11 @@
-import java.io.*;
-import java.util.Date;
+package org.unsynchronized.jdeserialize;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 public class ser8 {
 	public static void main(String args[]) {
@@ -9,7 +15,7 @@ public class ser8 {
 
 	public static void do_write() {
 		try {
-            bluh.zuh.blob4 bl = new bluh.zuh.blob4(1234);
+            blob4 bl = new blob4(1234);
 			FileOutputStream fos = new FileOutputStream("ser8.duh");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(bl);
@@ -28,7 +34,7 @@ public class ser8 {
 		try {
 			FileInputStream fos = new FileInputStream("ser8.duh");
 			ObjectInputStream ois = new ObjectInputStream(fos);
-            bluh.zuh.blob4 bl = (bluh.zuh.blob4)ois.readObject();
+            blob4 bl = (blob4)ois.readObject();
 			System.out.println("bluh.zuh.blob4: " + bl.toString());
 		} catch(FileNotFoundException e) {
 			System.out.println("file not found");

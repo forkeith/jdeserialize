@@ -1,6 +1,6 @@
-import java.util.*;
-import java.io.*;
-import java.lang.annotation.*;
+package org.unsynchronized.jdeserialize;
+
+import java.io.Serializable;
 
 @blobann(id = 0, sfoo = "blob5ann", cl = String.class)
 public class blob5 implements Serializable {

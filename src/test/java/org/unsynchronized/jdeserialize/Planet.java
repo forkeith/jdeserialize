@@ -1,7 +1,11 @@
-// Example derived from: http://download.oracle.com/javase/tutorial/java/javaOO/enum.html
+package org.unsynchronized.jdeserialize;
 
-import java.io.*;
-import java.util.*;
+// Example derived from: http://download.oracle.com/javase/tutorial/java/javaOO/enum.html
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
 public enum Planet {
     MERCURY (3.303e+23, 2.4397e6),
     VENUS   (4.869e+24, 6.0518e6),

@@ -1,5 +1,12 @@
-import java.io.*;
-import java.util.Date;
+package org.unsynchronized.jdeserialize;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 public class ser2 {
     public static class blob implements Serializable {

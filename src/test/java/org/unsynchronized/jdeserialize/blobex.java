@@ -1,5 +1,7 @@
-import java.util.*;
-import java.io.*;
+package org.unsynchronized.jdeserialize;
+
+import java.io.IOException;
+import java.io.Serializable;
 
 
 public class blobex implements Serializable {

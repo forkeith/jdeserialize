@@ -1,6 +1,8 @@
-import java.util.*;
-import java.lang.reflect.*;
-import java.lang.annotation.*;
+package org.unsynchronized.jdeserialize;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 @Documented
 @Retention(value=RetentionPolicy.RUNTIME)

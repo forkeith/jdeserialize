@@ -1,6 +1,12 @@
-import java.util.*;
-import java.lang.reflect.*;
-import java.io.*;
+package org.unsynchronized.jdeserialize;
+
+import java.io.Serializable;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+import java.util.Iterator;
+import java.util.List;
 
 public class blobproxy implements Serializable, InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) {

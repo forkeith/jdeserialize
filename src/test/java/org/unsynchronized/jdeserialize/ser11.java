@@ -1,6 +1,16 @@
-import java.io.*;
-import java.util.*;
-import java.lang.reflect.*;
+package org.unsynchronized.jdeserialize;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Proxy;
+import java.util.Iterator;
+import java.util.List;
 
 public class ser11 {
 	public static void main(String args[]) {
