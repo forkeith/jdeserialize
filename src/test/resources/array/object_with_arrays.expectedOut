@@ -1,0 +1,24 @@
+read: org.unsynchronized.jdeserialize.array.ObjectWithArrays _h0x7e0004 = r_0x7e0000;  
+//// BEGIN stream content output
+org.unsynchronized.jdeserialize.array.ObjectWithArrays _h0x7e0004 = r_0x7e0000;  
+//// END stream content output
+
+//// BEGIN class declarations (excluding array classes)
+class org.unsynchronized.jdeserialize.array.ObjectWithArrays implements java.io.Serializable {
+    int[] intArray;
+    java.lang.Object[] objectArray;
+    java.lang.String[] stringArray;
+}
+
+//// END class declarations
+
+//// BEGIN instance dump
+[instance 0x7e0004: 0x7e0000/org.unsynchronized.jdeserialize.array.ObjectWithArrays
+  field data:
+    0x7e0000/org.unsynchronized.jdeserialize.array.ObjectWithArrays:
+        stringArray: r0x7e0008: [array 0x7e0008 classdesc [cd 0x7e0007: name [Ljava.lang.String; uid -5921575005990323385]: [arraycoll sz 1 [String 0x7e0009: "First, Second"]]
+        intArray: r0x7e0006: [array 0x7e0006 classdesc [cd 0x7e0005: name [I uid 5600894804908749477]: [arraycoll sz 0]
+        objectArray: null
+]
+//// END instance dump
+
