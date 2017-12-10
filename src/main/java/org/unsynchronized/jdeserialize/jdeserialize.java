@@ -1,21 +1,7 @@
 package org.unsynchronized.jdeserialize;
 
-import java.io.DataInputStream;
-import java.io.EOFException;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectStreamConstants;
-import java.io.PrintStream;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -88,7 +74,6 @@ public class jdeserialize {
         "volatile", "const", "float", "native", "super", "while" }; 
     public static HashSet<String> keywordSet;
 
-    private String filename;
     private Map<Integer,content> handles = new LinkedHashMap<Integer,content>();
     private ArrayList<Map<Integer,content>> handlemaps = new ArrayList<Map<Integer,content>>();
     private ArrayList<content> content;
@@ -250,9 +235,6 @@ public class jdeserialize {
             default:
                 throw new IOException("can't process type: " + f.toString());
         }
-    }
-    public jdeserialize(String filename) {
-        this.filename = filename;
     }
     private int newHandle() {
         return curhandle++;
@@ -1192,7 +1174,7 @@ public class jdeserialize {
             FileInputStream fis = null;
             try {
                 fis = new FileInputStream(filename);
-                jdeserialize jd = new jdeserialize(filename);
+                jdeserialize jd = new jdeserialize();
                 if(go.hasOption("-debug")) {
                     jd.debugEnabled = true;
                 } else {
