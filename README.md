@@ -16,6 +16,12 @@ Download the latest release jar and run
 java -jar jdeserialize.jar -help
 ```
 
+To compile the `jar` file from source:
+```
+./mvnw package
+```
+then you will find it in the `target` subfolder.
+
 To analyse a serialized java object stored in a file run
 ```
 java -jar jdeserialize.jar <theFileToAnalyse>
